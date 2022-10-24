@@ -1,5 +1,6 @@
 const basePath = process.cwd();
 const fetch = require("node-fetch");
+//const fetch = require("cross-fetch");
 const { AUTH } = require(`${basePath}/src/config.js`);
 
 function fetchNoRetry(url, options) {
@@ -25,6 +26,9 @@ function fetchNoRetry(url, options) {
         })
         .catch((error) => {
           console.error(`CATCH ERROR: ${error}`);
+          console.log('testing');
+          console.log(url);
+          console.log(options);
         });
   });
 }
