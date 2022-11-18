@@ -1,4 +1,5 @@
-const abi = [{
+const abi = [
+  {
     "inputs": [],
     "stateMutability": "nonpayable",
     "type": "constructor"
@@ -1364,4 +1365,5 @@ const abi = [{
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
-  }]
+  }
+]

@@ -7,22 +7,22 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Dave McClane Collection -Test1";
-const description = "These are test NFTs for the Dave McClane Collection";
+const namePrefix = "The Original Dave McClane";
+const description = "Driven by the motto 'Inner-city, at risk, and breaking down barriers,' The Original Dave McClane marks the brand's steps of entering the web3 space. Comprising of 5000 unique NFTs eternally residing on the polygon network, each image depicts but a portion of what the Dave McClane brand ultimately respresents.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 20,
+    growEditionSizeTo: 5000,
     layersOrder: [
       { name: "Background" },
-      { name: "Face" },
-      { name: "Earrings" },
+      { name: "Skin Color" },
       { name: "Mouth" },
-      { name: "Face Tats" },
+      { name: "Tattoos" },
       { name: "Eyes" },
-      { name: "Headware" },
-      { name: "Glasses" },
+      { name: "Head" },
+      { name: "Earrings" },
+      { name: "Eye Wear" },
     ],
   },
 ];
@@ -49,12 +49,13 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'goerli'; // only goerli, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'Dave McClane Collection -Test1';
-const CONTRACT_SYMBOL = 'DMC1';
+const CONTRACT_NAME = 'The Original Dave McClane';
+const CONTRACT_SYMBOL = 'ODM';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x2792911F3D8761068cac18B6c77Fa70EeB8DDcCE';
 const TREASURY_ADDRESS = '0x2792911F3D8761068cac18B6c77Fa70EeB8DDcCE';
 const MAX_SUPPLY = 5000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const TEAM_RESERVE = 1000; // The number of NFTs that can only be minted by the contract owner for free.
 const MINT_PRICE = 0.001; // Minting price per NFT. Goerli = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
@@ -62,7 +63,7 @@ const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a singl
 const PUBLIC_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PRESALE_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
+const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = "0x2792911F3D8761068cac18B6c77Fa70EeB8DDcCE"; // Address that will receive the royalty
 const BASE_URI = null; // only update if you want to manually set the base uri
@@ -70,13 +71,13 @@ const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the
 const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses
 
 // ** OPTIONAL **
-let CONTRACT_ADDRESS = "0xfc2d7f8D9F0D7Bc04C8F70B54C348f1e66733DAA"; // If you want to manually include it
+let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
 
 // Generic Metadata is optional if you want to reveal your NFTs
-const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
+const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "Which Dave McClane will you get?"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeiahzuo7yuprtiqofsjgr4rrjqpwt645jfcssvfarm2ie7webrcgki"; // Replace with your generic image that will display for all NFTs pre-reveal.
+const GENERIC_DESCRIPTION = ""; // Replace with what you want the generic descriptions to say.
+const GENERIC_IMAGE = ""; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {
@@ -95,10 +96,10 @@ try {
 const solanaMetadata = {
   symbol: "YC",
   seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.youtube.com/c/hashlipsnft",
+  external_url: "https://davemcclane.xyz",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "0x2792911F3D8761068cac18B6c77Fa70EeB8DDcCE",
       share: 100,
     },
   ],
@@ -190,6 +191,7 @@ module.exports = {
   ROYALTY_SHARE,
   ROYALTY_ADDRESS,
   MAX_SUPPLY,
+  TEAM_RESERVE,
   MINT_PRICE,
   TOKENS_PER_MINT,
   PRESALE_MINT_START_DATE,

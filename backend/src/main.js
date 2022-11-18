@@ -170,10 +170,12 @@ const addMetadata = (_dna, _edition) => {
 
 const addAttributes = (_element) => {
   let selectedElement = _element.layer.selectedElement;
+  if(selectedElement.name.trim().toLowerCase() !== "blank"){
   attributesList.push({
     trait_type: _element.layer.name,
     value: selectedElement.name,
   });
+}
 };
 
 const loadLayerImg = async (_layer) => {
@@ -302,33 +304,39 @@ const createDna = (_layers) => {
           // TODO: apply your own rules by overwriting entries in layerMap
           // or by setting done=false to find another random element for the current layer
           // 
-          // see https://youtu.be/tEgR85YxDeI for more info
+          if(layer.name==='Earrings'){
+            if(name !== 'blank'){
+              if(layerMap.get('Head').name.endsWith('Helmet')){
+                done = false; 
+                console.log("earrings found on a helmet");
+              }
+            }
+          }
 
-          // examples:
-          // if(layer.name==='glasses'){
-          //   if(name=='eye patch'){
-          //       layerMap.set('hair', findElement(_layers, 'hair', 'laurel wreath'));
-          //   }
-          // }
-          // if(layer.name==='hair'){
-          //   if(name.endsWith('helmet')){
-          //       layerMap.set('mouth', findElement(_layers, 'mouth', 'banana'));
-          //   }
-          // }
-          // if(layer.name==='mouth'){
-          //   if(name==='mustache'){
-          //       if(layerMap.get('glasses').name==='eye patch'){
-          //           done = false; 
-          //           console.log("found eye patch and mustache -> rerun!");
-          //       }
-          //   }
-          // }
-
-          if(layer.name==='Glasses'){
+          if(layer.name==='Eye Wear'){
             if(name.endsWith('Shades')){              
-                if(layerMap.get('Headware').name.startsWith('helmet')){
+                if(layerMap.get('Head').name.endsWith('Helmet')){
                     done = false; 
                     console.log("found shades on a helmet -> rerun!");
+                }
+            }
+          }
+
+          if(layer.name==='Eye Wear'){
+            if(name === 'Monocle'){              
+                if(layerMap.get('Head').name === 'Shades and Helmet'){
+                    done = false; 
+                    console.log("found monocle on a helmetShades -> rerun!");
+                }
+            }
+          }
+
+
+          if(layer.name==='Head'){
+            if(name === 'Air Bender'){              
+                if(layerMap.get('Eyes').name.startsWith('Angry')){
+                    done = false; 
+                    console.log("found angry Eye on a airBender -> rerun!");
                 }
             }
           }
