@@ -61,6 +61,12 @@ header .container {
   align-items: center;
 }
 
+.main-wrapper {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+}
+
 /* NOT CONNECTED */
 .not-connected {
   align-items: center;
@@ -324,13 +330,36 @@ section {
 }
 
 .splide__slide {
-  border: var(--accent-color) solid;
+  border: black;
   border-width: 5px 10px;
 }
 
 .splide__slide img {
   width: 100%;
 }
+
+/* ROADMAP */
+.roadmap {
+  padding: 5rem 0;
+  background: var(--accent-color);
+  text-align: center;
+  color: var(--bg-color);
+}
+
+.roadmap h1 {
+  text-shadow: 2px 2px 0 var(--font-color);
+  font-style: italic;
+  margin: 2rem 0;
+  font-size: 3.5rem;
+}
+
+.roadmap p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-family: var(--font-secondary);
+  margin: 1rem 0;
+}
+
 
 /* SPINNER */
 .dot-spin {
