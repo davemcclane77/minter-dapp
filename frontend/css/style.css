@@ -379,16 +379,29 @@ section {
   .menu {
     gap: 1rem;
   }
+  .menu img {
+    width: 5vw
+  }
   .wallet-btn {
     margin-left: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.5rem;
     max-width: 8rem;
+    font-size: 0.75rem;
   }
   .not-connected {
     background-color: var(--bg-color-transparent);
     border-radius: 5px;
     padding: 2rem;
     margin: 0 auto;
+  }
+  .not-connected h1 {
+    font-size: 2.5rem;
+  }
+  .not-connected h2 {
+    font-size: 1.5rem;
+  }
+  .not-connected p {
+    font-size: 1rem;
   }
   .countdown ul {
     display: grid;
@@ -419,6 +432,15 @@ section {
   .mint-qty .btn {
     padding: 1rem;
     font-size: 13px;
+  }
+  .roadmap {
+    padding: 2rem 0;
+  }
+  .roadmap h1 {
+    font-siz: 2.5rem;
+  }
+  .roadmap p {
+    font-size: 1rem;
   }
 }
 
