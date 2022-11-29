@@ -9,7 +9,7 @@
   --font-secondary: "Arvo", serif;
   --font-code: "Roboto", monospace;
   --bg-color: #000000;
-  --bg-color-transparent: #00163f80;
+  --bg-color-transparent: #000000bd;
   --font-color: #ffffff;
   --btn-bg-color: #ffffff;
   --accent-color: #be7efe;
@@ -392,6 +392,7 @@ section {
     border-radius: 5px;
     padding: 2rem;
     margin: 0 auto;
+    min-width: 100%;
   }
   .not-connected h1 {
     font-size: 2.5rem;
