@@ -492,8 +492,8 @@ footer {
   .wallet-btn {
     margin-left: 0;
     padding: 0.25rem 0.5rem;
-    max-width: 8rem;
-    font-size: 0.75rem;
+    max-width: 5rem;
+    font-size: 0.70rem;
   }
   .not-connected {
     background-color: var(--bg-color-transparent);
