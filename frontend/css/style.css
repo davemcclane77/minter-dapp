@@ -557,6 +557,10 @@ footer {
   .faq p {
     font-size: 1rem;
   }
+  footer p {
+    font-size: .8rem;
+  }
+  
 }
 
 /* UTILITIES */
