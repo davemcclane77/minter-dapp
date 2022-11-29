@@ -359,6 +359,15 @@ section {
   margin: 1rem 0;
 }
 
+/* FOOTER */
+footer {
+  text-align: center;
+  font-weight: bold;
+  padding: 2rem 0;
+  background: black;
+  color: white;
+}
+
 
 /* SPINNER */
 .dot-spin {
