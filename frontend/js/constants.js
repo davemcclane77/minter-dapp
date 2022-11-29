@@ -1,7 +1,7 @@
 const contractAddress = "0x6e138Cf4FA90Aba4eF1b81018896f8C2F7a7d3fe"; // Replace with your own contract address
 const chain = 'polygon'; // goerli, polygon, or ethereum
 
-const welcome_h1 = "Welcome to davemcclane.xyz";
+const welcome_h1 = "Welcome to The Dave McClane NFT project";
 const welcome_h2 = "Connect to MetaMask to Get Started";
 const welcome_p = 'The Original Dave McClane collection is a series of 5000 NFTs that depicts random variations of the Dave McClane fictional character. Learn more about the Dave McClane brand by visiting <a href="https://davemcclane.com"  target="_blank" rel="noopener noreferrer">davemcclane.com</a> ';
 const h1_presale_coming_soon = "NFT Drop Coming Soon!!";
