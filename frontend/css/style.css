@@ -588,7 +588,7 @@ footer {
     padding: 2rem 0;
   }
   .roadmap h1 {
-    font-siz: 2.5rem;
+    font-size: 2.5rem;
   }
   .roadmap p {
     font-size: 1rem;
@@ -597,7 +597,10 @@ footer {
     padding: 2rem 0;
   }
   .whois h1 {
-    font-siz: 2.5rem;
+    font-size: 2.5rem;
+  }
+  .faq h1 {
+    font-size: 2.5rem;
   }
   .whois p {
     font-size: 1rem;
