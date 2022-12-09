@@ -25,6 +25,7 @@
       href="images/x-icon/favicon-16x16.png"
     />
     <link rel="manifest" href="images/x-icon/site.webmanifest" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/three-dots.min.css" />
     <link rel="stylesheet" href="css/splide.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -217,8 +218,10 @@
       <div class="container">
         <h1>Who is Dave McClane?</h1>
         <div class="flex">
+          <div class="member aos-init aos-animate" data-aos="zoom-in" data-aos-offset="200">
           <span><img src="images/whois/dave.jpg" alt="Dave McClane"></span>
-          <p>Dave McClane is a fictional cartoon character that made his debut in 2007 as the mascot for <a href="https://davemcclane.com/" target="_blank" rel="noopener noreferrer">Dave McClane Clothing</a>. In addition to the clothing brand, Dave McClane was featured on the Dave McClane Comic page, where he embarked upon several random ass adventures.<br><br> Dave McClane is typically featured with an Afro, hair pick, and wearing black Chuck Taylors. Dave embodies the notion of a Los Angeles inner-city youth and a product of his upbringing. He is traditionally characterized as excessively overanalytical almost to a fault. As a result, he is very insightful and is quite frankly a damn “nerd.” <br><br>Some of Dave’s hobbies are riding and fixing mini-bikes, raising pigeons, flipping, playing pickleball, and coming up with all sorts of contraptions.</p>
+          </div>
+          <p>Dave McClane is a fictional cartoon character that made his debut in 2007 as the mascot for <a href="https://davemcclane.com/" target="_blank" rel="noopener noreferrer">Dave McClane Clothing</a>. In addition to the clothing brand, Dave McClane was featured on the Dave McClane Comic page, where he embarked upon several random ass adventures.<br><br> Dave McClane is typically featured with an afro, hair pick, and wearing black Chuck Taylors. Dave embodies the notion of a Los Angeles inner-city youth and a product of his upbringing. He is traditionally characterized as excessively overanalytical almost to a fault. As a result, he is very insightful and is quite frankly a damn “nerd.” <br><br>Some of Dave’s hobbies are riding and fixing mini-bikes, raising pigeons, flipping, playing pickleball, and coming up with all sorts of contraptions.</p>
         </div>
       </div>
     </section>
@@ -271,9 +274,15 @@
     <script src="js/metamask-onboarding.bundle.js"></script>
     <script src="js/web3.min.js"></script>
     <script src="js/splide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/constants.js"></script>
     <script src="js/abi.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/app.js"></script>
+    <script>
+      AOS.init({
+        disable: 'phone'
+      });
+    </script>
   </body>
 </html>
