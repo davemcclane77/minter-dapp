@@ -337,6 +337,45 @@ section {
   width: 100%;
 }
 
+/* WHOIS */
+.whois {
+  padding: 5rem 0;
+  background: #fdf39f;
+  text-align: center;
+  color: var(--bg-color);
+}
+
+.whois h1 {
+  text-shadow: 2px 2px 0 var(--font-color);
+  font-style: italic;
+  margin: 2rem 0;
+  font-size: 3.5rem;
+}
+
+.whois p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-family: var(--font-secondary);
+  margin: 1rem 0;
+}
+
+.whois img {
+  margin-right: 1rem;
+  object-fit: none;
+  object-position: bottom left;
+  border: 1px solid black;
+}
+
+.whois .flex {
+  display: flex;
+  align-items: center;
+}
+
+.whois a {
+  color: #7850a0;
+  font-weight: 700;
+}
+
 /* ROADMAP */
 .roadmap {
   padding: 5rem 0;
@@ -554,6 +593,15 @@ footer {
   .roadmap p {
     font-size: 1rem;
   }
+  .whois {
+    padding: 2rem 0;
+  }
+  .whois h1 {
+    font-siz: 2.5rem;
+  }
+  .whois p {
+    font-size: 1rem;
+  }
   .faq h2 {
     width: 90%;
     font-size: 1.5rem;
@@ -563,6 +611,10 @@ footer {
   }
   footer p {
     font-size: .8rem;
+  }
+
+  .whois .flex {
+    flex-direction: column;
   }
   
 }
